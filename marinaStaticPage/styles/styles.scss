@@ -1,0 +1,568 @@
+@import 'navbar';
+@import 'checkboxes';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: medium;
+}
+body{
+  background-color: $light;
+}
+.main-container {
+   
+  padding: 0.5rem calc((100vw - 1200px) / 2);
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+// Hero Section CSS
+.hero {  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:auto; 
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    margin-top: 0 auto;
+    height: 90vh;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    padding-right: 24px;
+    padding-left: 24px;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      height: 100%;
+    }
+
+    &--top {
+      width: auto;
+      line-height: 1.2;
+
+      @include tablet {
+        padding: 5rem 0;
+      }
+
+      @include mobile {
+        line-height: 1.5;
+      }
+    }
+
+    &--top h1 {
+      font-size: 4rem;
+      color: $lime;
+
+      @include mobile {
+        font-size: 1.5rem;
+      }
+    }
+    &--checkbox {
+        width: 100%;
+        height: 20px;   
+    }
+    &--checkbox_cont {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &--top h2 {
+      font-size: 4rem;
+      color: $dark;
+
+      @include mobile {
+        font-size: 2rem;
+      }
+    }
+    &--top p {
+      font-size: 2rem;
+      color: $dark;
+      margin-top: 1rem;
+      font-weight: 700;
+
+      @include mobile {
+        font-size: 1.5rem;
+      }
+    }
+
+    &--btn {
+      font-size: 1rem;
+      background-color: $lime;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 4px;
+      color: $light;
+      margin-top: 2rem;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s;
+      outline: none;
+    }
+
+    &--btn a {
+      position: relative;
+      z-index: 2;
+      color: $light;
+      text-decoration: none;
+    }
+
+    &--btn:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: $orangeRed;
+      transition: all 0.3s;
+      border-radius: 4px;
+    }
+
+    &--btn:hover:after {
+      width: 100%;
+    }
+
+    &--top {
+      text-align: center;
+    }
+
+    &img {
+      height: 500px;
+      width: 500px;
+      @include tablet {
+        padding: 5rem 0;
+      }
+
+      @include mobile {
+        line-height: 1.5;
+      }
+    }
+     &--bottom {
+     height: 90vh;
+     width: 100%;   
+      margin-bottom: 70px;
+      background-position: center;
+    }
+  }
+  
+}
+.features {
+  background-color: $light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+ 
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-items: center;
+    
+    margin: 70px auto;       
+    width: 1200px;
+    
+    max-width: 1200px;
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+ 
+  &__container--1 {
+    
+    width: 1200px;
+    background-color: #cfb4b4;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    padding: 50px;
+  }
+  .element-container-1 {
+    &-text {
+      margin-bottom: 25px;
+    }
+  }
+ 
+  
+  .image-1 {
+    width: 50vh;
+    height: 440px;
+    position: absolute;
+    left: 697px;
+    top: -75px;
+    background-image: url(./images/feature-1.png);
+    z-index: 100;    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  &__container--2 {
+   
+    width: 1200px;
+    background-color: #cfb4b4;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    padding: 50px;
+    padding-left: 470px;
+  }
+  .element-container-2 {
+    &-text {
+      margin-bottom: 25px;
+    }
+  }
+  .image-2 {
+    width: 50vh;
+    height: 440px;
+    position: absolute;
+    left: -20px;
+    top: -47px;
+    background-image: url(./images/feature-2.jpeg);
+    z-index: 100;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  &__container--3 {
+  //  height: 40vh;
+    width: 1200px;
+    background-color: #cfb4b4;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    padding: 50px;
+  }
+  .element-container-3 {
+    &-text {
+      margin-bottom: 25px;
+    }
+  }
+  .image-3 {
+    width: 50vh;
+    height: 440px;
+    position: absolute;
+    left: 697px;
+    top: -20px;
+    background-image: url(./images/feature-1.png);
+    z-index: 100;    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  .elements-1 {
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    
+    .element-1 {
+      width: 200px;
+      margin: 10px;
+      padding: 20px;
+      background-color: rgb(219, 215, 217);
+      box-shadow: 1px 3px 25px -3px rgba(10,10,10,1);
+      &:hover {
+        background-color: rgb(219, 196, 208);
+    }
+      .element-1-arrow {
+        float: right;
+      }
+      
+    }
+    
+    .element-2 {
+      width: 200px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 20px;
+      background-color: rgb(219, 215, 217);
+      box-shadow: 1px 3px 25px -3px rgba(10,10,10,1);
+      &:hover {
+        background-color: rgb(219, 196, 208);
+      }
+      .element-2-arrow {
+        float: right;
+      }
+    }
+    .element-3 {
+      width: 200px;
+      height: 100px;
+      margin: 10px;
+      padding: 15px;
+      background-color: rgb(219, 215, 217);
+      box-shadow: 1px 3px 25px -3px rgba(10,10,10,1);
+      &:hover {
+        background-color: rgb(219, 196, 208);
+      }
+      .element-3-arrow {
+        float: right;
+      }
+    }
+    .element-4 {
+      width: 200px;
+      height: 100px;
+      margin: 10px;
+      padding: 15px;  
+      background-color: rgb(219, 215, 217);
+      box-shadow: 1px 3px 25px -3px rgba(10,10,10,1);
+      &:hover {
+        background-color: rgb(219, 196, 208);
+      }
+      .element-4-arrow {
+        float: right;
+      }
+    }
+  }
+
+  .elements-2 {
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    
+    .element-1 {
+      width: 200px;
+      margin: 10px;
+      padding: 20px;
+      background-color: rgb(219, 215, 217);
+      box-shadow: 1px 3px 25px -3px rgba(10,10,10,1);
+      &:hover {
+        background-color: rgb(219, 196, 208);
+    }
+      .element-1-arrow {
+        float: right;
+      }
+      
+    }
+    
+    .element-2 {
+      width: 200px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 20px;
+      background-color: rgb(219, 215, 217);
+      box-shadow: 1px 3px 25px -3px rgba(10,10,10,1);
+      &:hover {
+        background-color: rgb(219, 196, 208);
+      }
+      .element-2-arrow {
+        float: right;
+      }
+    }
+    .element-3 {
+      width: 200px;
+      height: 100px;
+      margin: 10px;
+      padding: 15px;
+      background-color: rgb(219, 215, 217);
+      box-shadow: 1px 3px 25px -3px rgba(10,10,10,1);
+      &:hover {
+        background-color: rgb(219, 196, 208);
+      }
+      .element-3-arrow {
+        float: right;
+      }
+    }
+    .element-4 {
+      width: 200px;
+      height: 100px;
+      margin: 10px;
+      padding: 15px;  
+      background-color: rgb(219, 215, 217);
+      box-shadow: 1px 3px 25px -3px rgba(10,10,10,1);
+      &:hover {
+        background-color: rgb(219, 196, 208);
+      }
+      .element-4-arrow {
+        float: right;
+      }
+    }
+  }
+
+  .elements-3 {
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    
+    .element-1 {
+      width: 200px;
+      margin: 10px;
+      padding: 20px;
+      background-color: rgb(219, 215, 217);
+      box-shadow: 1px 3px 25px -3px rgba(10,10,10,1);
+      &:hover {
+        background-color: rgb(219, 196, 208);
+    }
+      .element-1-arrow {
+        float: right;
+      }
+      
+    }
+    
+    .element-2 {
+      width: 200px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 20px;
+      background-color: rgb(219, 215, 217);
+      box-shadow: 1px 3px 25px -3px rgba(10,10,10,1);
+      &:hover {
+        background-color: rgb(219, 196, 208);
+      }
+      .element-2-arrow {
+        float: right;
+      }
+    }
+    .element-3 {
+      width: 200px;
+      height: 100px;
+      margin: 10px;
+      padding: 15px;
+      background-color: rgb(219, 215, 217);
+      box-shadow: 1px 3px 25px -3px rgba(10,10,10,1);
+      &:hover {
+        background-color: rgb(219, 196, 208);
+      }
+      .element-3-arrow {
+        position: absolute;
+        right: 535px;
+        top: 176px;
+      }
+    }
+    .element-4 {
+      width: 200px;
+      height: 100px;
+      margin: 10px;
+      padding: 15px;  
+      background-color: rgb(219, 215, 217);
+      box-shadow: 1px 3px 25px -3px rgba(10,10,10,1);
+      &:hover {
+        background-color: rgb(219, 196, 208);
+      }
+      .element-4-arrow {
+        position: absolute;
+        right: 535px;
+        top: 295px;
+      }
+    }
+  }
+
+
+}
+  
+  
+
+.plan {
+  width: 80%;
+  line-height: 1.5;
+  .button {
+    margin-top: 40px;    
+  }
+  .button a {
+    text-decoration: none;
+  }
+  #button {
+    padding: 12px 47px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: $lime;
+    color: $light;
+    
+    &:hover {
+      background: $orangeRed;
+      transition: all 0.3s ease;
+    }
+  }
+  margin:70px auto 140px;
+  .plan-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4rem;
+    .plan-1 {
+      
+      border-radius: 10px;
+      border-style: solid;
+      border-color: rgb(165, 163, 163);
+      padding: 45px;
+      &:hover {
+        border-color: rgb(252, 3, 3);
+        transition: all 0.3s ease;
+      }
+    }
+    .plan-2 {
+     
+      border-radius: 10px;
+      border-style: solid;
+      border-color: rgb(165, 163, 163);
+      padding: 45px;
+      &:hover {
+        border-color: rgb(252, 3, 3);
+        transition: all 0.3s ease;
+      }
+      
+    }
+   
+    
+    
+    .plan-3 {
+      
+      border-radius: 10px;
+      border-style: solid;
+      border-color: rgb(165, 163, 163);
+      padding: 45px;
+      &:hover {
+        border-color: rgb(252, 3, 3);
+        transition: all 0.3s ease;
+      }
+    }
+  }
+  
+  
+
+}
+// ipad plust
+@media (max-width: 1200px) {
+.plan{
+  .plan {
+    .plan-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  }
+}
+
+
+// ipad mini
+@media (max-width: 768px) {
+.plan {
+  .plan-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+}
+// iphone 11
+@media (max-width: 480px) {
+  .plan {
+    .plan-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+// iphone 5
+@media (max-width: 320px) {
+  .plan {
+    .plan-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
